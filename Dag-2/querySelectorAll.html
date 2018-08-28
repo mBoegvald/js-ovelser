@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .typo {
+            color: red;
+            font-size: 2em;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="removeClass">Remove Class</button>
+
+    <h3>En</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque assumenda voluptas quis libero doloribus nobis laborum obcaecati quia, molestias asperiores ratione rerum numquam dolor ad adipisci consectetur sed nostrum.</p>
+
+    <h3>To</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque assumenda voluptas quis libero doloribus nobis laborum obcaecati quia, molestias asperiores ratione rerum numquam dolor ad adipisci consectetur sed nostrum.</p>
+
+    <h3>Tre</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque assumenda voluptas quis libero doloribus nobis laborum obcaecati quia, molestias asperiores ratione rerum numquam dolor ad adipisci consectetur sed nostrum.</p>
+
+    <h3>Fire</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque assumenda voluptas quis libero doloribus nobis laborum obcaecati quia, molestias asperiores ratione rerum numquam dolor ad adipisci consectetur sed nostrum.</p>
+
+    <h3>Fem</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates itaque assumenda voluptas quis libero doloribus nobis laborum obcaecati quia, molestias asperiores ratione rerum numquam dolor ad adipisci consectetur sed nostrum.</p>
+
+    <script type="text/javascript">
+        const para = document.querySelectorAll("p");
+        document.querySelectorAll("p").forEach(para => {
+            para.addEventListener("click", () => {
+                para.classList.add("typo");
+
+            });
+            document.querySelector("#removeClass").addEventListener("click", () => {
+                para.classList.remove("typo");
+            });
+        });
+    </script>
+
+
+</body>
+</html>
