@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let length;
+        let width;
+        brugerKontakt();
+
+        function arealBeregning() {
+
+            areal = length * width;
+            if (Number(areal)) {
+                alert(areal);
+            } else {
+                alert("Dette er ikke et tal!");
+            }
+
+            let forfra = confirm("Vil du udregne et nyt areal?");
+            if (forfra) {
+                location.reload();
+            }
+
+
+        }
+
+        function brugerKontakt() {
+            length = prompt("Længde:");
+            width = prompt("Bredde:");
+
+            arealBeregning();
+
+        }
+    </script>
+</body>
+
+</html>

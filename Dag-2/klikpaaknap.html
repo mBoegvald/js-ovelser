@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box {
+            margin: 10px;
+            width: 10vw;
+            height: 10vw;
+            font-size: 1em;
+            background-color: red;
+        }
+
+        #bax {
+            margin: 10px;
+            width: 10vw;
+            height: 10vw;
+            font-size: 1em;
+            background-color: red;
+        }
+
+        h2 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="klik">Klik</button>
+    <button id="slet">Slet</button>
+    <button id="html">HTML</button>
+    <button id="flyt">Flyt</button>
+
+
+    <div id="box">
+
+    </div>
+    <div id="bax">
+    </div>
+    <script type="text/javascript">
+        const myBut1 = document.querySelector("#klik");
+        const myBut2 = document.querySelector("#slet");
+        const myBut3 = document.querySelector("#html");
+        const myBut4 = document.querySelector("#flyt");
+        const box = document.querySelector("#box");
+        const bax = document.querySelector("#bax");
+
+
+        myBut1.addEventListener("click", visTekstKlik);
+        myBut2.addEventListener("click", sletTekst);
+        myBut3.addEventListener("click", tilfoejHTML);
+        myBut4.addEventListener("click", flytHTML);
+
+        function visTekstKlik() {
+            box.textContent = "KLIK";
+        }
+
+        function sletTekst() {
+            box.textContent = "";
+            bax.textContent = "";
+        }
+
+        function tilfoejHTML() {
+            box.innerHTML = "<h2 class='ryk'>Overskrift</h2><p class='ryk'>This is a paragraph</p>";
+        }
+
+        function flytHTML() {
+            var boxHTML = document.querySelector(".ryk");
+            bax.appendChild(boxHTML);
+
+
+        }
+    </script>
+</body>
+
+</html>

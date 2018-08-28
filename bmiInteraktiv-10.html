@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type=text/javascript>
+        let height = prompt("Højde i cm");
+        let weight = prompt("Vægt i kg");
+
+        height = height / 100;
+
+
+        bmi = weight / (height * height);
+
+        if (bmi < 19) {
+
+            alert("Bmi'en er " + Math.round(bmi) + ", fedmeklasse: Undervægtig");
+
+        } else if (!Number(bmi)) {
+            alert("Kun tal!");
+
+        } else if (bmi >= 20 && bmi < 25) {
+            alert("Bmi'en er " + Math.round(bmi));
+
+        } else if (bmi >= 25 && bmi < 30) {
+            alert("Bmi'en er " + Math.round(bmi));
+
+        } else if (bmi >= 30 && bmi < 35) {
+            alert("Bmi'en er " + Math.round(bmi));
+
+        } else if (bmi >= 35 && bmi < 40) {
+            alert("Bmi'en er " + Math.round(bmi));
+
+        } else {
+            alert("Bmi'en er " + Math.round(bmi));
+        }
+
+    </script>
+
+</body>
+
+</html>

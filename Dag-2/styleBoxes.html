@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body {
+            color: burlywood;
+        }
+
+        .box {
+            display: inline-block;
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid silver;
+            margin: 5vw;
+            transition: all 1s;
+        }
+
+        .boxfx1 {
+            border: 5px solid red;
+        }
+
+        .boxfx2 {
+            background-color: blue;
+            transition: all 3s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+    <script type="text/javascript">
+        document.querySelector("#box1").addEventListener("click", function() {
+            document.querySelector("#box1").classList.add("boxfx1");
+        });
+        document.querySelector("#box2").addEventListener("click", function() {
+            document.querySelector("#box2").classList.add("boxfx2");
+        });
+        document.querySelector("#box3").addEventListener("click", function() {
+            document.querySelector("#box3").style.borderRadius = "50%";
+            document.querySelector("#box3").style.border = "10px dotted purple";
+        });
+        document.querySelector("#box4").addEventListener("click", function() {
+            document.querySelector("#box4").style.boxShadow = "10px 10px rgba(28, 81, 123, 0.46)";
+            document.querySelector("#box4").style.backgroundColor = "#53a7ea";
+        });
+    </script>
+
+</body>
+
+</html>
