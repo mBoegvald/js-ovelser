@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #billede {
+        max-width: 200px;}
+    </style>
+</head>
+
+<body>
+    <div class="tekst">
+        <template class="dyretemplate">
+            <div class="tekst">
+
+            </div>
+        </template>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            let dyr = [{
+                    "navn": "Flodhest",
+                    "type": "Pattedyr",
+                    "levested": "Afrika"
+                }, {
+                    "navn": "Skildpadde",
+                    "type": "Reptil",
+                    "levested": "Vand"
+                },
+                {
+                    "navn": "Mandrill",
+                    "type": "Pattedyr",
+                    "levested": "Tropiske regnskove"
+                }
+            ];
+
+            let dest = document.querySelector(".tekst");
+            let temp = document.querySelector(".dyretemplate");
+
+            dyr.forEach(animal => {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector(".tekst").textContent = animal.navn + " " + animal.type + " " + animal.levested;
+                dest.appendChild(klon);
+            });
+
+
+
+        };
+    </script>
+
+</body>
+
+</html>

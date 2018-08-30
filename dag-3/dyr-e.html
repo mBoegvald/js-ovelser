@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #billede {
+        max-width: 200px;}
+    </style>
+</head>
+
+<body>
+
+
+    <div id="tekst">
+
+    </div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            let dyr = [{
+                    "navn": "Flodhest",
+                    "type": "Pattedyr",
+                    "levested": "Afrika"
+                }, {
+                    "navn": "Skildpadde",
+                    "type": "Reptil",
+                    "levested": "Vand"
+                },
+                {
+                    "navn": "Mandrill",
+                    "type": "Pattedyr",
+                    "levested": "Tropiske regnskove"
+                }
+            ];
+
+            let dyret = ": Et " + dyr.type + " som lever i " + dyr.levested;
+            let flodhest = dyr.navn;
+            let dest = document.querySelector("#tekst");
+
+            dyr.forEach(dyr => {
+                dest.innerHTML += dyr.navn + ": Et " + dyr.type + " fra " + dyr.levested + "<br>";
+            });
+
+        };
+    </script>
+
+</body>
+
+</html>
