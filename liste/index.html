@@ -6,7 +6,19 @@
     <title>JSON</title>
 </head>
 
-<style></style>
+<style>
+    * {
+        font-family: sans-serif;
+
+
+    }
+
+    img {
+        max-width: 200px;
+    }
+
+    ]
+</style>
 
 <body>
     <img src=''>
@@ -31,7 +43,7 @@
                 <p class="data-fb"></p>
                 <p class="data-hobby"></p>
                 <p class="data-sex"></p>
-                <p class="data-billede"></p>
+                <img class="data-billede">
 
 
 
@@ -87,7 +99,7 @@
                 klon.querySelector(".data-tlf").textContent = person.tlf + " ";
                 klon.querySelector(".data-hobby").textContent = person.hobby + " ";
                 klon.querySelector(".data-sex").textContent = person.sex + " ";
-                klon.querySelector(".data-billede").textContent = '<img src="' + person.billede + '">';
+                klon.querySelector(".data-billede").src = person.billede;
 
 
                 // placer klon i HTML
